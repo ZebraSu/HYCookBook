@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/menu/index",
     "pages/example/index"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#F9F8F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarBackgroundColor": "#F9F8F6",
+    "navigationBarTitleText": "HY CookBook",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

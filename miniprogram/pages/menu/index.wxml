@@ -1,0 +1,62 @@
+<view class="menu-page">
+  <view
+    class="top-bar"
+    style="padding-top: {{navMetrics.statusBarHeight}}px; min-height: {{navMetrics.totalHeight}}px; padding-right: {{navMetrics.capsuleReservedWidth}}px;"
+  >
+    <view class="top-bar-inner" style="height: {{navMetrics.navBarHeight}}px; padding-left: {{navMetrics.horizontalPadding}}rpx;">
+      <view class="icon-button" bindtap="goBack">
+        <image class="top-icon" src="/images/ui/chevron-left.svg" mode="aspectFit"></image>
+      </view>
+      <view class="top-title">Our Menu</view>
+      <view class="icon-button">
+        <image class="top-icon" src="/images/ui/search.svg" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="menu-shell" style="height: calc(100vh - {{navMetrics.totalHeight}}px - env(safe-area-inset-bottom));">
+    <scroll-view class="category-rail" scroll-y enhanced show-scrollbar="{{false}}">
+      <view
+        wx:for="{{categories}}"
+        wx:key="key"
+        class="category-item {{activeCategory === item.key ? 'category-item-active' : ''}}"
+        data-key="{{item.key}}"
+        bindtap="selectCategory"
+      >
+        <view class="category-pill">
+          <image class="category-icon" src="/images/ui/{{item.icon}}.svg" mode="aspectFit"></image>
+        </view>
+        <view class="category-label">{{item.label}}</view>
+      </view>
+    </scroll-view>
+
+    <scroll-view class="dish-panel" scroll-y enhanced show-scrollbar="{{false}}">
+      <view class="section-head">
+        <view class="eyebrow">Chef's selection</view>
+        <view class="section-title">{{sectionTitle}}</view>
+      </view>
+
+      <view class="dish-list">
+        <view wx:for="{{dishes}}" wx:key="id" class="dish-card">
+          <view class="dish-main">
+            <image class="dish-image" mode="aspectFill" src="{{item.image}}"></image>
+            <view class="dish-copy">
+              <view class="dish-name">{{item.name}}</view>
+              <view class="dish-description">{{item.description}}</view>
+              <view class="dish-price">{{item.price}}</view>
+            </view>
+          </view>
+          <view class="add-button" bindtap="addToCart">
+            <view class="plus-vertical"></view>
+            <view class="plus-horizontal"></view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="fab" bindtap="previewCart">
+    <image class="fab-icon" src="/images/ui/shopping-bag.svg" mode="aspectFit"></image>
+    <view class="fab-badge">{{cartCount}}</view>
+  </view>
+</view>

@@ -1,29 +1,48 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="title">快速了解云开发</view>
-  <view class="top_tip">免鉴权接口调用 免部署后台 高并发</view>
-  <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
-    <view class="power_info" data-index="{{index}}" data-type="{{ power.type }}" bindtap="onClickPowerInfo">
-      <view class="power_info_text">
-        <view class="power_info_text_title">
-          {{power.title}}
-          <view class="power_info_text_tag" wx:if="{{power.tag}}">{{power.tag}}</view>
-        </view>
-        <view class="power_info_text_tip">{{power.tip}}</view>
+<view class="home-page">
+
+  <view class="main-content">
+    <view class="hero-shell">
+      <view class="hero-image-wrap">
+        <image
+          class="hero-image"
+          mode="aspectFill"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgirSlCv_htEYOF2JeIR5AhGQF1J1XINPa66VW9tPS2sjVx7Htzn8dUZj2BlOl1rEyJea_3p2vvsyUBpaW85sHH02hnCKPyerllOkey5h1P1R5lkcVeLwwFy0_BTyi9PVYIX6yk16pdnWPN3r37WmnNhUIvjjio2k4UncVxE_9rmSLBXwLyy4Sj23r9ljVixd3Ogkfx_X3lJ6FYXaFkoN9mmuXs_jBeWCvr0j1qe7RAeFPb9yKi9_QHHj4K5IWMgD10TOq-Wz9ug"
+        ></image>
+        <view class="hero-overlay"></view>
       </view>
-      <image wx:if="{{!power.showItem && power.item.length}}" class="power_info_more" src="../../images/arrow.svg"></image>
-      <image wx:if="{{power.showItem && power.item.length}}" class="power_info_less" src="../../images/arrow.svg"></image>
-      <image wx:if="{{!power.item.length}}" class="power_item_icon" src="../../images/arrow.svg"></image>
     </view>
-    <view wx:if="{{power.showItem}}">
-      <view wx:key="title" wx:for="{{power.item}}">
-        <view class="line"></view>
-        <view class="power_item" bindtap="jumpPage" data-type="{{ item.type }}" data-page="{{item.page}}">
-          <view class="power_item_title">{{item.title}}</view>
-          <image class="power_item_icon" src="../../images/arrow.svg"></image>
-        </view>
+
+    <view class="intro">
+      <view class="headline">Welcome to Our Kitchen</view>
+      <view class="subhead">
+        Discover our premium, cozy personal digital menu with warm, delicious offerings.
+      </view>
+    </view>
+
+    <view class="cta-button" bindtap="openMenu">
+      <view>Go to Menu</view>
+      <view class="cta-arrow">
+        <view class="arrow-shaft"></view>
+        <view class="arrow-head arrow-head-top"></view>
+        <view class="arrow-head arrow-head-bottom"></view>
       </view>
     </view>
   </view>
-  <cloud-tip-modal showTipProps="{{showTip}}" title="{{title}}" content="{{content}}"></cloud-tip-modal>
+
+  <view class="bottom-nav">
+    <view class="bottom-nav-inner">
+      <view class="nav-item nav-item-active">
+        <image class="nav-icon" src="/images/ui/home-active.svg" mode="aspectFit"></image>
+        <view class="nav-text nav-text-active">Home</view>
+      </view>
+      <view class="nav-item" bindtap="openMenu">
+        <image class="nav-icon" src="/images/ui/menu.svg" mode="aspectFit"></image>
+        <view class="nav-text">Menu</view>
+      </view>
+      <view class="nav-item">
+        <image class="nav-icon" src="/images/ui/user.svg" mode="aspectFit"></image>
+        <view class="nav-text">Profile</view>
+      </view>
+    </view>
+  </view>
 </view>
