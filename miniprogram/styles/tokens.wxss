@@ -1,0 +1,16 @@
+/* Shared colors and type roles for native pages and isolated components. */
+.theme {
+  --paper: #ffffff;
+  --ink: #2d402d;
+  --muted: #59644f;
+  --green: #a8c978;
+  --green-ink: #35552f;
+  --pink: #f2a49a;
+  --line: #e0e6da;
+  --field: #f4f6f1;
+  --button-sketch: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjAiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCAzNjAgNTYiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIxIDMgQzczIDEgMTI1IDQgMTgyIDMgUzI4MyAxIDMzNiAzIFEzNTYgNCAzNTcgMTkgTDM1NiAzNyBRMzU1IDUyIDMzNyA1MyBDMjY4IDU1IDE5MCA1MSAxMTkgNTMgTDIzIDUyIFE0IDUzIDMgMzggTDQgMjAgUTMgNSAyMSAzWiIgc3Ryb2tlPSIjMzU1NTJmIiBzdHJva2Utd2lkdGg9IjEuNyIvPjxwYXRoIGQ9Ik0xMiAxMSBROCAxNCA4IDI0IEw3IDM3IFE3IDQ3IDE4IDQ4IE0yMjIgNTEgUTI4NSA1MyAzMjkgNTAiIHN0cm9rZT0iIzM1NTUyZiIgc3Ryb2tlLXdpZHRoPSIwLjciIG9wYWNpdHk9IjAuNDgiLz48ZyBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC40MCI+PHBhdGggZD0iTTE3IDMzIEwzMiAxMyBNMjEgNDMgTDQ0IDEyIE0zNyA0NSBMNjAgMTQgTTU0IDQ0IEw2OSAyNSBNMjkxIDM1IEwzMDUgMTMgTTMwMiA0NSBMMzI2IDEyIE0zMTggNDMgTDM0MCAxNSBNMzM2IDQwIEwzNDcgMjUiLz48L2c+PHBhdGggZD0iTTc5IDkgTDEwNCA4IE0yNjAgNDYgTDI4MSA0NSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuOCIgb3BhY2l0eT0iMC41Ii8+PC9nPjwvc3ZnPg==");
+  --font-ui: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  --text-body: 16px;
+  --text-note: 14px;
+  --radius: 14px;
+}

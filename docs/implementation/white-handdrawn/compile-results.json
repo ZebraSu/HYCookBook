@@ -1,0 +1,26 @@
+[
+  {
+    "file": "pages/index/index.wxss",
+    "passed": true
+  },
+  {
+    "file": "pages/menu/index.wxss",
+    "passed": true
+  },
+  {
+    "file": "pages/profile/index.wxss",
+    "passed": true
+  },
+  {
+    "file": "pages/basket/index.wxss",
+    "passed": true
+  },
+  {
+    "file": "custom-tab-bar/index.wxss",
+    "passed": true
+  },
+  {
+    "file": "components/quantity-stepper/index.wxss",
+    "passed": true
+  }
+]

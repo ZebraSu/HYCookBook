@@ -1,0 +1,21 @@
+.profile-body { max-width: 520px; margin: 0 auto; padding: 28px 20px 32px; }
+.profile-heading { display: block; font-size: 26px; font-weight: 600; }
+.profile-subtitle { display: block; font-size: 14px; color: var(--muted); margin-top: 8px; }
+.saved-menu.saved-menu { display: flex; align-items: center; width: 100%; text-align: left; padding: 24px 0; margin-top: 16px; }
+.saved-icon { width: 36px; height: 40px; margin-right: 16px; flex-shrink: 0; }
+.saved-copy { flex: 1; min-width: 0; }
+.saved-title { display: block; font-size: 18px; font-weight: 600; }
+.saved-note { display: block; font-size: 14px; color: var(--muted); margin-top: 6px; }
+.saved-arrow { font-size: 24px; margin-left: 12px; }
+.collection { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
+.collection-title { display: block; font-size: 24px; }
+.collection-note { display: block; font-size: 14px; margin-top: 8px; color: var(--muted); }
+.flavor-list { display: flex; gap: 12px; margin-top: 24px; }
+.flavor-item { flex: 1; min-width: 0; text-align: center; }
+.flavor-character { width: 76px; height: 92px; margin: 0 auto 12px; }
+.flavor-name { display: block; font-size: 16px; font-weight: 600; }
+.flavor-dish { display: block; font-size: 14px; margin-top: 6px; color: var(--muted); }
+.storage-note { display: block; font-size: 14px; color: var(--muted); margin-top: 36px; text-align: center; }
+@media (max-width: 350px) { .profile-body { padding: 24px 16px; } .flavor-list { gap: 8px; } .flavor-character { width: 68px; height: 84px; } }
+
+.flavor-character { background: #fff7e8; border-radius: 46% 51% 45% 49%; }

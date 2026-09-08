@@ -2,16 +2,39 @@
   "pages": [
     "pages/index/index",
     "pages/menu/index",
-    "pages/example/index"
+    "pages/profile/index",
+    "pages/basket/index"
   ],
   "window": {
-    "backgroundColor": "#F9F8F6",
+    "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F9F8F6",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "HY CookBook",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
+  "usingComponents": {},
+  "tabBar": {
+    "custom": true,
+    "color": "#707968",
+    "selectedColor": "#527A4B",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/menu/index",
+        "text": "菜品"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  },
   "style": "v2",
   "lazyCodeLoading": "requiredComponents"
 }

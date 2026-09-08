@@ -1,0 +1,12 @@
+<view class="theme basket-page">
+  <view class="basket-heading"><text class="basket-title">{{cartCount ? '今天，就吃这些' : '选几道喜欢的菜'}}</text><text class="basket-note">{{cartCount ? '已选 ' + cartKinds + ' 道菜 · ' + cartCount + ' 份' : '慢慢挑，凑成一餐。'}}</text></view>
+  <view wx:if="{{!cartCount}}" class="basket-empty"><image class="empty-bag" src="/images/handdrawn/bag.svg" /><text class="empty-title">还没有已选菜品</text><text class="muted">在菜品页点 +，就能加入这里。</text><button class="k-button primary-button empty-cta" bindtap="openMenu" hover-class="pressed">去选今天的菜</button></view>
+  <block wx:else>
+    <view wx:for="{{cartItems}}" wx:key="id" class="basket-row">
+      <image class="basket-photo" src="{{item.image}}" mode="aspectFit" aria-label="{{item.name}}" />
+      <view class="basket-dish"><text class="basket-name">{{item.name}}</text><text class="basket-description">{{item.description}}</text><quantity-stepper dish-id="{{item.id}}" name="{{item.name}}" quantity="{{item.quantity}}" bindchange="updateQuantity" /></view>
+    </view>
+    <button class="k-button continue-button" bindtap="openMenu" hover-class="pressed">继续选菜 →</button>
+    <view class="basket-footer"><text class="footer-note">已保存在本机，复制后可粘贴分享。</text><view class="footer-actions"><button class="k-button clear-cart" bindtap="clearCart" hover-class="pressed">清空</button><button class="k-button primary-button copy-button" bindtap="copyMenu" hover-class="pressed">复制菜品清单</button></view></view>
+  </block>
+</view>

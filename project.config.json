@@ -45,8 +45,8 @@
     "disableSWC": true
   },
   "appid": "wxa8020d479b658578",
-  "projectname": "quickstart-wx-cloud",
-  "libVersion": "2.20.1",
+  "projectname": "HYCookBook",
+  "libVersion": "3.14.3",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {
     "search": {
@@ -64,9 +64,19 @@
     "miniprogram": {
       "list": [
         {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
+          "id": 0,
+          "name": "首页",
+          "pathName": "pages/index/index"
+        },
+        {
+          "id": 1,
+          "name": "菜单",
+          "pathName": "pages/menu/index"
+        },
+        {
+          "id": 2,
+          "name": "我的菜单",
+          "pathName": "pages/basket/index"
         }
       ]
     }
@@ -74,8 +84,38 @@
   "compileType": "miniprogram",
   "srcMiniprogramRoot": "miniprogram/",
   "packOptions": {
-    "ignore": [],
-    "include": []
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "images"
+      },
+      {
+        "type": "folder",
+        "value": "pages/example"
+      },
+      {
+        "type": "folder",
+        "value": "components/cloudTipModal"
+      },
+      {
+        "type": "folder",
+        "value": "components/kitchen-nav"
+      }
+    ],
+    "include": [
+      {
+        "type": "folder",
+        "value": "images/food"
+      },
+      {
+        "type": "folder",
+        "value": "images/handdrawn"
+      },
+      {
+        "type": "folder",
+        "value": "images/posters"
+      }
+    ]
   },
   "editorSetting": {
     "tabIndent": "insertSpaces",

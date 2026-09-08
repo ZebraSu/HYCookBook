@@ -1,4 +1,4 @@
 {
-  "navigationStyle": "custom",
-  "backgroundColor": "#f9f8f6"
+  "navigationBarTitleText": "HY CookBook",
+  "usingComponents": {}
 }

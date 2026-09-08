@@ -1,48 +1,23 @@
-<view class="home-page">
-
-  <view class="main-content">
-    <view class="hero-shell">
-      <view class="hero-image-wrap">
-        <image
-          class="hero-image"
-          mode="aspectFill"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgirSlCv_htEYOF2JeIR5AhGQF1J1XINPa66VW9tPS2sjVx7Htzn8dUZj2BlOl1rEyJea_3p2vvsyUBpaW85sHH02hnCKPyerllOkey5h1P1R5lkcVeLwwFy0_BTyi9PVYIX6yk16pdnWPN3r37WmnNhUIvjjio2k4UncVxE_9rmSLBXwLyy4Sj23r9ljVixd3Ogkfx_X3lJ6FYXaFkoN9mmuXs_jBeWCvr0j1qe7RAeFPb9yKi9_QHHj4K5IWMgD10TOq-Wz9ug"
-        ></image>
-        <view class="hero-overlay"></view>
-      </view>
+<view class="theme home-page tab-page">
+  <view class="home-content">
+    <view class="home-heading">
+      <text>今天也要好好吃饭</text>
+      <text class="recommendation-label">今日推荐</text>
     </view>
-
-    <view class="intro">
-      <view class="headline">Welcome to Our Kitchen</view>
-      <view class="subhead">
-        Discover our premium, cozy personal digital menu with warm, delicious offerings.
-      </view>
+    <swiper class="poster-carousel" current="{{current}}" autoplay="{{autoplay}}" interval="6000" duration="450" circular bindchange="onPosterChange" aria-label="今日推荐菜品海报，左右滑动切换">
+      <swiper-item wx:for="{{posters}}" wx:key="id">
+        <image class="hero-poster" src="{{item.poster}}" mode="aspectFit" aria-label="{{item.name}}手绘海报" />
+      </swiper-item>
+    </swiper>
+    <view class="poster-caption">
+      <text class="featured-name">{{featured.name}}</text>
+      <text class="featured-description">{{featured.description}}</text>
     </view>
-
-    <view class="cta-button" bindtap="openMenu">
-      <view>Go to Menu</view>
-      <view class="cta-arrow">
-        <view class="arrow-shaft"></view>
-        <view class="arrow-head arrow-head-top"></view>
-        <view class="arrow-head arrow-head-bottom"></view>
-      </view>
+    <view class="poster-pagination">
+      <button wx:for="{{posters}}" wx:key="id" class="k-button poster-page" data-index="{{index}}" bindtap="selectPoster" aria-label="查看{{item.name}}海报" aria-pressed="{{current === index}}">
+        <view class="poster-dot {{current === index ? 'poster-dot-active' : ''}}" />
+      </button>
     </view>
-  </view>
-
-  <view class="bottom-nav">
-    <view class="bottom-nav-inner">
-      <view class="nav-item nav-item-active">
-        <image class="nav-icon" src="/images/ui/home-active.svg" mode="aspectFit"></image>
-        <view class="nav-text nav-text-active">Home</view>
-      </view>
-      <view class="nav-item" bindtap="openMenu">
-        <image class="nav-icon" src="/images/ui/menu.svg" mode="aspectFit"></image>
-        <view class="nav-text">Menu</view>
-      </view>
-      <view class="nav-item">
-        <image class="nav-icon" src="/images/ui/user.svg" mode="aspectFit"></image>
-        <view class="nav-text">Profile</view>
-      </view>
-    </view>
+    <button class="k-button primary-button home-cta" bindtap="openMenu" hover-class="pressed"><text class="button-label">去选今天的菜</text><image class="button-arrow" src="/images/handdrawn/arrow.svg" /></button>
   </view>
 </view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "今天的菜单",
+  "usingComponents": {
+    "quantity-stepper": "/components/quantity-stepper/index"
+  }
+}

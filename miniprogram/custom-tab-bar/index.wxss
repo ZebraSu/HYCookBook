@@ -1,0 +1,9 @@
+@import "../styles/tokens.wxss";
+.tab-bar { position: fixed; z-index: 50; left: 0; right: 0; bottom: 0; display: flex; height: calc(56px + env(safe-area-inset-bottom)); padding: 0 16px env(safe-area-inset-bottom); box-sizing: border-box; background: var(--paper); border-top: 1px solid var(--line); font-family: var(--font-ui); }
+.tab-item.tab-item { position: relative; display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: center; margin: 0; padding: 4px 0; width: auto; height: 55px; border: 0; border-radius: 0; line-height: 1.2; background: transparent; color: var(--muted); }
+.tab-item::after { border: 0; }
+.tab-icon { width: 22px; height: 22px; }
+.tab-label { margin-top: 3px; font-size: 14px; }
+.tab-item.is-selected { color: var(--green-ink); font-weight: 600; }
+.tab-mark { position: absolute; top: 0; width: 24px; height: 3px; background: var(--green); border-radius: 50% 35% 40% 30%; transform: rotate(-5deg); }
+.tab-pressed { opacity: 0.65; }

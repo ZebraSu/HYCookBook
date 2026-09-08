@@ -1,0 +1,5 @@
+<view class="theme stepper">
+  <button wx:if="{{quantity > 0}}" class="step step-minus" data-delta="-1" bindtap="change" hover-class="pressed" aria-label="减少{{name}}"><text class="disc">−</text></button>
+  <text wx:if="{{quantity > 0}}" class="amount" aria-live="polite">{{quantity}}</text>
+  <button class="step step-plus {{quantity >= 99 ? 'step-disabled' : ''}}" data-delta="1" bindtap="change" disabled="{{quantity >= 99}}" hover-class="pressed" aria-label="添加{{name}}"><text class="disc plus-disc">+</text></button>
+</view>

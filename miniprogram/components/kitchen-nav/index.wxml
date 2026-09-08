@@ -1,0 +1,26 @@
+<view class="nav">
+  <button
+    class="item {{active === 'home' ? 'active' : ''}}"
+    data-key="home"
+    bindtap="go"
+    aria-label="首页"
+  >
+    <image src="/images/handdrawn/home.svg" /><text>首页</text>
+  </button>
+  <button
+    class="item {{active === 'menu' ? 'active' : ''}}"
+    data-key="menu"
+    bindtap="go"
+    aria-label="菜单"
+  >
+    <image src="/images/handdrawn/menu.svg" /><text>菜单</text>
+  </button>
+  <button
+    class="item {{active === 'profile' ? 'active' : ''}}"
+    data-key="profile"
+    bindtap="go"
+    aria-label="我的"
+  >
+    <image src="/images/handdrawn/user.svg" /><text>我的</text>
+  </button>
+</view>

@@ -1,4 +1,7 @@
 {
-  "navigationStyle": "custom",
-  "backgroundColor": "#f9f8f6"
+  "navigationBarTitleText": "今天吃什么",
+  "disableScroll": true,
+  "usingComponents": {
+    "quantity-stepper": "/components/quantity-stepper/index"
+  }
 }

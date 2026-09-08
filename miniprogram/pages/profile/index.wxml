@@ -1,0 +1,23 @@
+<view class="theme profile-page tab-page">
+  <view class="profile-body">
+    <text class="profile-heading">今天的菜单</text>
+    <text class="profile-subtitle">喜欢的家常味，慢慢选。</text>
+    <button class="k-button saved-menu" bindtap="openSavedMenu" hover-class="pressed" aria-label="{{count ? '查看我的已选菜品' : '去选今天的菜'}}">
+      <image class="saved-icon" src="/images/handdrawn/bag.svg" />
+      <view class="saved-copy"><text class="saved-title">{{count ? '已选 ' + kinds + ' 道菜 · ' + count + ' 份' : '今天想吃什么？'}}</text><text class="saved-note">{{count ? '已自动保存在本机' : '选几道喜欢的，凑成一餐'}}</text></view><text class="saved-arrow">›</text>
+    </button>
+    <button class="k-button primary-button profile-cta" bindtap="openMenu" hover-class="pressed">{{count ? '继续选菜' : '去选今天的菜'}}</button>
+    <view class="collection">
+      <text class="collection-title hand">厨房里的好朋友</text>
+      <text class="collection-note">熟悉的味道，变成了小伙伴。</text>
+      <view class="flavor-list">
+        <view wx:for="{{dishes}}" wx:key="id" class="flavor-item">
+          <image class="flavor-character" src="{{item.monster.image}}" mode="aspectFit" aria-label="{{item.monster.name}}风味小怪兽" />
+          <text class="flavor-name">{{item.monster.name}}</text>
+          <text class="flavor-dish">{{item.shortName}}</text>
+        </view>
+      </view>
+    </view>
+    <text class="storage-note">菜单保存在当前设备，可复制后分享。</text>
+  </view>
+</view>

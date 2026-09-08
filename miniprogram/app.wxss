@@ -1,27 +1,14 @@
-/**app.wxss**/
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-} 
-
-button {
-  background: initial;
-}
-
-button:focus{
-  outline: 0;
-}
-
-button::after{
-  border: none;
-}
-
-
-page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+@import "./styles/hand-font.wxss";
+@import "./styles/tokens.wxss";
+page { background: #ffffff; color: #2d402d; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; font-size: 16px; line-height: 1.5; }
+view, text, button, input, scroll-view { box-sizing: border-box; }
+image { display: block; }
+.k-button.k-button { margin: 0; padding: 0; width: auto; min-height: 44px; border: 0; border-radius: 0; background: transparent; color: inherit; font-size: inherit; font-weight: 400; line-height: 1.4; }
+.k-button.k-button::after { border: 0; }
+.hand { font-family: "KitchenHand", "Kaiti SC", STKaiti, KaiTi, cursive; font-weight: 400; }
+.primary-button.primary-button { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; padding: 12px 20px; border: 0; border-radius: 18px 14px 19px 13px; background: var(--green) var(--button-sketch) center / 100% 100% no-repeat; color: var(--green-ink); font-size: 16px; font-weight: 600; line-height: 1.5; }
+.button-label { white-space: nowrap; }
+.button-arrow { width: 24px; height: 18px; margin-left: 12px; }
+.pressed { opacity: 0.65; }
+.muted { color: var(--muted); font-size: var(--text-note); }
+.tab-page { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
